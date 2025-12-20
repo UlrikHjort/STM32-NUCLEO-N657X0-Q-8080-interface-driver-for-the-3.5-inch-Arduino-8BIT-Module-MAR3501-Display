@@ -1,5 +1,5 @@
 /**************************************************************************
- --  STM32N6 3.5inch Arduino 8-BIT Module MAR3501 Display gpio setup for 8080
+ --  STM32N6 3.5inch Arduino 8-BIT Module MAR3501 Display main
  --
  --                 Mandelbrot set demo main
  --
@@ -132,4 +132,5 @@ void Error_Handler(void) {
 	while (1) {
 	}
 }
+
 
