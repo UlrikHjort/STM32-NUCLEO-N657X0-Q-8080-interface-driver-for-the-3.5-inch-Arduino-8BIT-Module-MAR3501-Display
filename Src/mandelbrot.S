@@ -17,7 +17,6 @@
  -- Along with This Program; if not, See <Http://Www.Gnu.Org/Licenses/>.
 ***************************************************************************/
 .syntax unified
-    .thumb
     .section .text
 
     @ RGB565 conversion
@@ -39,7 +38,6 @@ RGB565:
     @ Input: r0 = iter, r1 = max_iter
     @ Output: r0 = color (RGB565)
     .align 2
-    .thumb_func
     .global color_map11
 color_map11:
     push    {r4-r7, lr}
@@ -100,7 +98,6 @@ color_map11:
 
     @ mandelbrot function
     .align 2
-    .thumb_func
     .global mandelbrot
 	.equ LCD_HEIGHT, 320
 	.equ LCD_WIDTH, 480
