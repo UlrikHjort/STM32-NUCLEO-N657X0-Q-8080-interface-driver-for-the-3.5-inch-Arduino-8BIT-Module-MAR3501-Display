@@ -64,8 +64,8 @@ color_map11:
     mul     r0, r4, r5          @ r = c * 3
     mul     r5, r4, r5          @ c * 3
     movs    r1, #255
-    sub     r1, r1, r5          @ g = 255 - c*3
-    movs    r2, #0              @ b = 0
+    sub     r2, r1, r5          @ g = 255 - c*3
+    movs    r1, #0              @ b = 0
     b       .Lcall_rgb565
 
 .Lrange2:
@@ -78,8 +78,8 @@ color_map11:
     mul     r6, r4, r5          @ (c-85) * 3
     movs    r0, #255
     sub     r0, r0, r6          @ r = 255 - (c-85)*3
-    movs    r1, #0              @ g = 0
-    mul     r2, r4, r5          @ b = (c-85) * 3
+    movs    r2, #0              @ g = 0
+    mul     r1, r4, r5          @ b = (c-85) * 3
     b       .Lcall_rgb565
 
 .Lrange3:
@@ -87,10 +87,10 @@ color_map11:
     sub     r4, r4, #170        @ c -= 170
     movs    r0, #0              @ r = 0
     movs    r5, #3
-    mul     r1, r4, r5          @ g = (c-170) * 3
+    mul     r2, r4, r5          @ g = (c-170) * 3
     mul     r5, r4, r5          @ (c-170) * 3
-    movs    r2, #255
-    sub     r2, r2, r5          @ b = 255 - (c-170)*3
+    movs    r1, #255
+    sub     r1, r1, r5          @ b = 255 - (c-170)*3
 
 .Lcall_rgb565:
     bl      RGB565
